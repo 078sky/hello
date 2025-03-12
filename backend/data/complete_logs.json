@@ -1,1 +1,60 @@
- 
+{
+    "chat_logs": [
+        {
+            "timestamp": "2024-03-12T20:15:30.123Z",
+            "request": {
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": "You are an intelligent assistant with human-like memory capabilities. You can recall past conversations and experiences, with memories becoming stronger through repeated recall. When using memories in your responses, try to naturally weave them into the conversation rather than just listing them.\n\nRelevant memories:\n- This is our first conversation (Recalled 0 times)"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Hello, how are you?"
+                    }
+                ],
+                "model": "gpt-4",
+                "temperature": 0.7,
+                "max_tokens": 1000
+            },
+            "response": {
+                "role": "assistant",
+                "content": "Hello! I'm doing well, thank you for asking. This is our first conversation together, and I'm looking forward to chatting with you. How are you today?",
+                "finish_reason": "stop",
+                "tokens_used": {
+                    "prompt": 124,
+                    "completion": 37,
+                    "total": 161
+                }
+            },
+            "memory_operations": {
+                "embedding_created": {
+                    "text": "Hello, how are you?",
+                    "model": "text-embedding-ada-002",
+                    "tokens": 5
+                },
+                "memories_retrieved": [],
+                "memory_stored": {
+                    "id": 0,
+                    "content": "Hello, how are you?",
+                    "created_at": 1710270930.123,
+                    "consolidation_factor": 1.0
+                }
+            }
+        }
+    ],
+    "embedding_logs": [
+        {
+            "timestamp": "2024-03-12T20:15:30.123Z",
+            "text": "Hello, how are you?",
+            "model": "text-embedding-ada-002",
+            "tokens": 5,
+            "cost": 0.0001
+        }
+    ],
+    "memory_stats": {
+        "total_memories": 1,
+        "total_tokens_used": 166,
+        "total_cost": 0.0033
+    }
+} 
