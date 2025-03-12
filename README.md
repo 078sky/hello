@@ -1,0 +1,167 @@
+# Memory-Enhanced Chat Assistant
+
+A chat assistant with human-like memory capabilities, implementing memory consolidation and recall algorithms inspired by cognitive science research.
+
+## 🧠 Key Features
+
+- **Human-like Memory**: Implements a biologically-inspired memory system
+- **Dynamic Memory Consolidation**: Memories become stronger through repeated recall
+- **Context-Aware Responses**: Assistant uses relevant past conversations
+- **Real-time Memory Visualization**: See which memories influence responses
+- **Simple Storage**: File-based storage for easy deployment
+
+## 🏗️ Architecture
+
+┌─────────────────┐ ┌───────────────┐
+│ React UI │◄────►│ Flask API │
+└─────────────────┘ └───────┬───────┘
+│
+┌───────▼───────┐
+│ Memory Core │
+└───────┬───────┘
+│
+┌───────▼───────┐
+│ OpenAI API │
+└───────────────┘   
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.9+
+- Node.js 16+   
+
+### Backend Setup 
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/memory-chat-assistant.git
+cd memory-chat
+```
+
+### Create and activate virtual environment
+```bash
+python -m venv venv
+source venv/bin/activate # On Windows: venv\Scripts\activate
+```
+
+### Install dependencies
+```bash
+cd backend
+pip install -r requirements.txt
+```
+
+### Set environment variables
+```bash
+cp .env.example .env
+```
+Edit `.env` file with your OpenAI API key
+
+### Start the server
+```bash
+cd backend
+python app.py
+```
+
+### Frontend Setup
+1. Install dependencies
+```bash
+cd frontend
+npm install
+```
+
+2. Start the development server
+```bash
+npm start
+```
+
+
+Visit http://localhost:3000 to use the application.
+
+## 🧪 Core Components
+
+### Memory Core
+
+#### Vectorization
+- Converts text to embeddings using OpenAI's API
+- Implements caching to reduce API calls
+- File: `memory_core/vectorization.py`
+
+#### Memory Consolidation
+- Implements the consolidation formula: `g_n = g_{n-1} + (1-e^-t)/(1+e^-t)`
+- Strengthens memories through repeated recall
+- File: `memory_core/consolidation.py`
+
+#### Memory Recall
+- Uses vector similarity for initial memory retrieval
+- Applies recall probability based on memory strength
+- File: `memory_core/recall.py`
+
+### Storage System
+- Simple file-based JSON storage
+- Thread-safe operations
+- Stores both chat history and memory embeddings
+- File: `storage.py`
+
+## 📁 Project Structure
+
+root/
+├── backend/
+│ ├── app.py # Main Flask application
+│ ├── memory_core/
+│ │ ├── init.py
+│ │ ├── vectorization.py # Text vectorization
+│ │ ├── recall.py # Memory recall
+│ │ └── consolidation.py # Memory consolidation
+│ ├── llm.py # OpenAI integration
+│ ├── storage.py # Data persistence
+│ └── requirements.txt
+└── frontend/
+├── src/
+│ ├── App.js
+│ ├── components/
+│ │ ├── ChatApp.jsx
+│ │ └── MessageBubble.jsx
+│ └── styles/
+└── package.json
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+```env
+OPENAI_API_KEY=your_api_key_here
+```
+
+### Memory Parameters
+- Similarity Threshold: 0.86 (configurable in recall.py)
+- Consolidation Rate: Adaptive based on recall frequency
+- Vector Dimension: 1536 (OpenAI Ada-002)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+### Development Setup
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📝 Technical Documentation
+
+For detailed technical documentation, see [TECHNICAL.md](docs/TECHNICAL.md).
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- OpenAI for their powerful API
+- Research papers on human memory consolidation
+- Open source community
+
+## 🔗 Links
+
+- [Live Demo](https://your-demo-url.com)
+- [Documentation](https://your-docs-url.com)
+- [Issue Tracker](https://github.com/yourusername/memory-chat/issues)
