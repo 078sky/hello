@@ -21,6 +21,7 @@ A chat assistant with human-like memory capabilities, implementing memory consol
 1. Clone the repository
 ```bash
 git clone https://github.com/078sky/hello.git
+cd hello
 ```
 
 ### Create and activate virtual environment
