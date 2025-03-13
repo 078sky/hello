@@ -50,6 +50,7 @@ python app.py
 ### Frontend Setup
 1. Install dependencies
 ```bash
+cd ..
 cd frontend
 npm install
 ```
