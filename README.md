@@ -44,7 +44,6 @@ Edit `.env` file with your OpenAI API key
 
 ### Start the server
 ```bash
-cd backend
 python app.py
 ```
 
