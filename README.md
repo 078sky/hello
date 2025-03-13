@@ -87,27 +87,6 @@ Visit http://localhost:3000 to use the application.
 - Stores both chat history and memory embeddings
 - File: `storage.py`
 
-## 📁 Project Structure
-
-root/
-├── backend/
-│ ├── app.py # Main Flask application
-│ ├── memory_core/
-│ │ ├── init.py
-│ │ ├── vectorization.py # Text vectorization
-│ │ ├── recall.py # Memory recall
-│ │ └── consolidation.py # Memory consolidation
-│ ├── llm.py # OpenAI integration
-│ ├── storage.py # Data persistence
-│ └── requirements.txt
-└── frontend/
-├── src/
-│ ├── App.js
-│ ├── components/
-│ │ ├── ChatApp.jsx
-│ │ └── MessageBubble.jsx
-│ └── styles/
-└── package.json
 ```
 
 ## 🔧 Configuration
