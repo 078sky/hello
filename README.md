@@ -101,12 +101,3 @@ OPENAI_API_KEY=your_api_key_here
 - Consolidation Rate: Adaptive based on recall frequency
 - Vector Dimension: 1536 (OpenAI Ada-002)
 
-## 🤝 Contributing
-
-Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
-### Development Setup
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
