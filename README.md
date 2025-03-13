@@ -10,19 +10,6 @@ A chat assistant with human-like memory capabilities, implementing memory consol
 - **Real-time Memory Visualization**: See which memories influence responses
 - **Simple Storage**: File-based storage for easy deployment
 
-## 🏗️ Architecture
-
-┌─────────────────┐ ┌───────────────┐
-│ React UI │◄────►│ Flask API │
-└─────────────────┘ └───────┬───────┘
-│
-┌───────▼───────┐
-│ Memory Core │
-└───────┬───────┘
-│
-┌───────▼───────┐
-│ OpenAI API │
-└───────────────┘   
 
 ## 🚀 Quick Start
 
@@ -33,8 +20,7 @@ A chat assistant with human-like memory capabilities, implementing memory consol
 ### Backend Setup 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/memory-chat-assistant.git
-cd memory-chat
+git clone https://github.com/078sky/hello.git
 ```
 
 ### Create and activate virtual environment
@@ -145,23 +131,3 @@ Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md)
 2. Create a feature branch
 3. Make your changes
 4. Submit a pull request
-
-## 📝 Technical Documentation
-
-For detailed technical documentation, see [TECHNICAL.md](docs/TECHNICAL.md).
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- OpenAI for their powerful API
-- Research papers on human memory consolidation
-- Open source community
-
-## 🔗 Links
-
-- [Live Demo](https://your-demo-url.com)
-- [Documentation](https://your-docs-url.com)
-- [Issue Tracker](https://github.com/yourusername/memory-chat/issues)
